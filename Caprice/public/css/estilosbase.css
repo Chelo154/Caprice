@@ -1,0 +1,29 @@
+.fondo-base-1{
+    background-image: url("https://i.ibb.co/mN7QPqt/fondo-gris.jpg");
+    background-color: black;
+    
+}
+.logo-caprice-1{
+    display: block;
+    margin: auto;
+    max-width:150px;
+    max-height: 150px;
+}
+.linea-gris{
+    border: 3px solid black; 
+    border-radius: 300px/10px; 
+    height: 0px; 
+    text-align: center;
+}
+.linea-naranja{
+    border: 3px solid darkorange;
+    border-radius: 300px/10px; 
+    height: 0px; 
+    text-align: center;
+}
+.imagen-carousel-1{
+    display:block;
+    margin:auto;
+    width: fit-content;
+    height: fit-content;
+}

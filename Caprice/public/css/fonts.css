@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Hanalei+Fill&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
+
+.letra-caprice{
+    font-family: 'Permanent Marker', cursive;   
+    color:darkorange;
+}
+.letra-caprice-negra{
+    font-family: 'Permanent Marker', cursive;   
+    color:black;
+}
+.letra-caprice-blanca{
+    font-family: 'Permanent Marker', cursive;   
+    color:white;
+}
+.letra-info-blanca{
+    font-family: 'Kalam', cursive;
+    color:white;
+}
