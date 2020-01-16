@@ -14,4 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+/* Rutas de Main Controller */
 Route::get('inicio','MainController@index');
+Route::get('foodandbeer','MainController@foodAndBeer');
+Route::get('nosotros','MainController@nosotros');
+Route::get('contactanos','MainController@contactos');

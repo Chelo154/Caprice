@@ -1,3 +1,9 @@
 body{
     background-image: url("https://i.ibb.co/qRsB6Fg/Caprice-Fondo.jpg");
 }
+.logo-navbar-principal{    
+    display: block;
+    margin: 0;
+    max-width: 50px;
+    max-height: 50px;   
+}
