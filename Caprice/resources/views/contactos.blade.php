@@ -39,10 +39,40 @@
             </nav>    
             </div>
             <!-- Inicio del contenido-->
-            <h1 class="letra-caprice">Esta es la seccion contactos</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1 class="letra-caprice text-center">¿Deseas Contactarnos?</h1> 
+                        <hr class="linea-gris">                    
+                    </div>
+                    <div class="col-sm-12">
+                        <h3 class="letra-caprice-blanca">Puedes contactarnos fácilmete por cualquiera de nuestras redes sociales</h3>                        
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="list-group">
+                            <a href="https://www.instagram.com/caprice.bartuc/" class="list-group-item list-group-item-dark ">                                
+                                <h4 class="letra-caprice-negra"> 
+                                    <span class="iconify" data-icon="fa:instagram" data-inline="false" style="color: orange;"></span>
+                                    Instagram: @capricebartuc                                    
+                                </h4>                             
+                            </a>
+                            <a href="https://www.facebook.com/capricetucuman/" class="list-group-item list-group-item-dark ">                                
+                                <h4 class="letra-caprice-negra"> 
+                                    <span class="iconify" data-icon="fa:facebook-square" data-inline="false" style="color: orange;"></span>
+                                    Facebook: https://www.facebook.com/capricetucuman/                                    
+                                </h4>                             
+                            </a>
+                          </div>
+                          <hr class="linea-naranja"/> 
+                    </div>
+                   
+                </div>
+                <h3 class="letra-caprice-blanca text-center"> Te esperamos!!</h3>
+            </div>
+            
     </div>
 </div>
 <link href="{!! asset('css/estilosbase.css') !!}" rel="stylesheet">
 <link href="{!! asset('css/fonts.css') !!}" rel="stylesheet">
-    
+<script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>    
 @endsection
