@@ -19,3 +19,8 @@ Route::get('inicio','MainController@index');
 Route::get('foodandbeer','MainController@foodAndBeer');
 Route::get('nosotros','MainController@nosotros');
 Route::get('contactanos','MainController@contactos');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
