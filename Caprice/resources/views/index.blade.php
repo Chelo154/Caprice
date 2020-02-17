@@ -48,6 +48,7 @@
                         <li data-target="#carouselId" data-slide-to="1"></li>
                         <li data-target="#carouselId" data-slide-to="2"></li>
                         <li data-target="#carouselId" data-slide-to="3"></li>
+
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
@@ -61,7 +62,7 @@
                         </div>
                         <div class="carousel-item">
                             <img src="https://i.ibb.co/vXLTDvL/Carousel-Caprice4.jpg" alt="Fourth slide" class="img-fluid imagen-carousel-1">
-                        </div>
+
 
                     </div>
                     <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
