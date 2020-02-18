@@ -19,7 +19,7 @@ class CrearProducto extends Migration
             $table->string('nombre',60);
             $table->integer('cantidad');
             $table->double('precio',10,2);
-            $table->enum('tipo',['plato,bebida']);
+            $table->enum('tipo',['plato','bebida']);
             $table->timestamps();
         }); 
     }
