@@ -12,8 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
 /* Rutas de Main Controller */
 Route::get('inicio','MainController@index');
 Route::get('foodandbeer','MainController@foodAndBeer');
