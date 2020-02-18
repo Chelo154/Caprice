@@ -11,9 +11,11 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('index');
 });
+
 
 /* Rutas de Main Controller */
 Route::get('inicio','MainController@index');
