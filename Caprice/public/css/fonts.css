@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
 
 .letra-caprice{
     font-family: 'Permanent Marker', cursive;   
@@ -18,4 +19,12 @@
 .letra-info-blanca{
     font-family: 'Kalam', cursive;
     color:white;
+}
+.letra-negocio-blanca{
+    font-family: 'Saira Semi Condensed', sans-serif;
+    color:white;
+}
+.letra-negocio-negra{
+    font-family: 'Saira Semi Condensed', sans-serif;
+    color:black;
 }
