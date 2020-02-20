@@ -16,13 +16,13 @@ class ProductsController extends Controller
     public function index()
     {
         //
-        if(Auth::check()){
-            $products = Product::all();
+       /* if(Auth::check()){
+            $products = Product::all(); */
             return view('products.index',['products'=>$products]);
-        }else{
-            return redirect()->guest('login');  
-        }
-       
+        /*}else{*/
+            return redirect()->guest('login');
+        /*}*/
+
     }
 
     /**
@@ -36,7 +36,7 @@ class ProductsController extends Controller
             $products = Product::all();
             return view('products.create');
         }else{
-            return redirect()->guest('login');  
+            return redirect()->guest('login');
         }
     }
 

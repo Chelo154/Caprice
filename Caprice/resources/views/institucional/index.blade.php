@@ -83,7 +83,7 @@
             <hr class="linea-naranja"/>
         </div><!--/Intro Presentacion-->
         <div justify-content-center class="col-sm-12">
-            <h4 class="letra-info-blanca" >
+            <h4 class="letra-info-blanca"  class="fa fa-align-center"  >
                 Caprice, es un bar nuevo ubicado en Barrio Sur de San Miguel de Tucumán. especificamente en Chacabuco 437.<br>
                 Vení y disfruta todos los días de la semana con buenas promos y  nuestro happy hour en pintas y comida de calidad!
                 Te esperamos para que pases un agradeble momento o celebres tu cumple con amigos , familia , pareja!
