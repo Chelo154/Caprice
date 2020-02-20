@@ -21,6 +21,9 @@
             <td>{{$product->nombre}}</td>
             <td>{{$product->cantidad}}</td>
             <td>{{$product->precio}}</td>
+            <td>
+            <a name="" id="" class="btn btn-primary" href="{{route('products.edit',$product)}}" role="button">Editar Producto</a>
+            </td>
           </tr>
          @endforeach
         </tbody>

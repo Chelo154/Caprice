@@ -78,6 +78,7 @@ class ProductsController extends Controller
     public function edit(Product $product)
     {
         //
+        return view('empleados.products.edit',['product'=>$product]);
     }
 
     /**
@@ -89,10 +90,8 @@ class ProductsController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        $producto = Product::find($product->id);
-        $producto = $product;
-        $producto->save();
         
+        return $request; 
     }
 
     /**

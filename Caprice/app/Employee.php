@@ -8,9 +8,12 @@ class Employee extends Model
 {
     //
     use SoftDeletes;
-    protected $table='employees';
+    protected $table='employee';
 
     public function orders(){
         return $this->hasMany('App\Order');
+    }
+    public function user(){
+        return $this->hasOne('App\User');
     }
 }
