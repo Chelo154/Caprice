@@ -4,16 +4,16 @@
     <div class="col-sm-12">
         <h3 class=" letra-negocio-blanca text-center">Editar Producto</h3>
     </div>
-    
+
     <div class="col">
-    <form class="form-group" method="POST" action="/products/{{$product->slug}}">            
-        @method('PUT')
-        @csrf            
+    <form class="form-group" method="POST" action="/products/{{$product->slug}}">
+        @csrf
         <div class="form-group" >
-          <label for="">Nombre</label>
-          <input type="text" name="nombre"  class="form-control" value="{{$product->nombre}}" >              
+            <input type="hidden" name="id"  class="form-control" value="{{$product->id}}" >
+            <label for="">Nombre</label>
+          <input type="text" name="nombre"  class="form-control" value="{{$product->nombre}}" >
           <label for="">Cantidad</label>
-          <input type="text" name="cantidad" id="" class="form-control" value="{{$product->cantidad}}">              
+          <input type="text" name="cantidad" id="" class="form-control" value="{{$product->cantidad}}">
           <label for="">Precio</label>
           <input type="text" name="precio" id="" class="form-control" value="{{$product->precio}}">
           <div class="form-group">
@@ -24,7 +24,7 @@
                   <option value="bebida">Bebida</option>
               </select>
           </div>
-          
+
           <button type="submit" class="btn btn-primary">Editar Producto</button>
         </div>
         </form>

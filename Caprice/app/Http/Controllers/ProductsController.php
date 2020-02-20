@@ -17,12 +17,12 @@ class ProductsController extends Controller
     {
         $products = Product::all();
         if(Auth::check()){
-            
+
             return view('empleados.products.index',['products'=>$products]);
         }else{
-            return redirect()->guest('login');  
+            return redirect()->guest('login');
         }
-       
+
     }
 
     /**
@@ -36,7 +36,7 @@ class ProductsController extends Controller
             $products = Product::all();
             return view('empleados.products.create');
         }else{
-            return redirect()->guest('login');  
+            return redirect()->guest('login');
         }
     }
 
@@ -48,12 +48,16 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        $product = new Product;
+        $product = Product::find($request->id);
+        //$product->id = $request->input('id');
         $product->nombre = $request->input('nombre');
         $product->cantidad = $request->input('cantidad');
         $product->precio = $request->input('precio');
         $product->tipo = $request->input('tipo');
         $product->save();
+
+
+
         $message = true;
         return view('empleados.products.create',['message'=>$message]);
     }
@@ -90,8 +94,8 @@ class ProductsController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        
-        return $request; 
+
+        return $request;
     }
 
     /**
@@ -103,8 +107,8 @@ class ProductsController extends Controller
     public function destroy(Product $product)
     {
         //
-        
+
         $productoABorrar= Product::find($product->id);
-        $productoABorrar->delete(); 
+        $productoABorrar->delete();
     }
 }
