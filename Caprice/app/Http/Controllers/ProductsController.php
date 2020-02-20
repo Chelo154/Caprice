@@ -15,14 +15,14 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
-       /* if(Auth::check()){
-            $products = Product::all(); */
-            return view('products.index',['products'=>$products]);
-        /*}else{*/
-            return redirect()->guest('login');
-        /*}*/
-
+        $products = Product::all();
+        if(Auth::check()){
+            
+            return view('empleados.products.index',['products'=>$products]);
+        }else{
+            return redirect()->guest('login');  
+        }
+       
     }
 
     /**
@@ -34,9 +34,9 @@ class ProductsController extends Controller
     {
         if(Auth::check()){
             $products = Product::all();
-            return view('products.create');
+            return view('empleados.products.create');
         }else{
-            return redirect()->guest('login');
+            return redirect()->guest('login');  
         }
     }
 
@@ -104,6 +104,6 @@ class ProductsController extends Controller
         //
         
         $productoABorrar= Product::find($product->id);
-        $productoABorrar->delete();
+        $productoABorrar->delete(); 
     }
 }

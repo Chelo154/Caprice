@@ -1,11 +1,12 @@
-<? php
+<?php
 
-  Route ::get( '/', function () {
+ /* Route ::get( '/', function () {
     return view('institucional.index');
-});
+});*/
 
 
 /* Rutas de Main Controller */
+Route::get('/','MainController@index');
 Route::get('inicio','MainController@index');
 Route::get('foodandbeer','MainController@foodAndBeer');
 Route::get('nosotros','MainController@nosotros');

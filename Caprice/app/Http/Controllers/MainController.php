@@ -5,15 +5,15 @@ use App\Http\Controllers\Controller;
 
 class MainController extends Controller{
     public function index(){
-        return view('index');
+        return view('institucional.index');
     }
     public function foodAndBeer(){
-        return view('foodandbeer');
+        return view('intitucional.foodandbeer');
     }
     public function nosotros(){
-        return view('quienesSomos');
+        return view('institucional.quienesSomos');
     }
     public function contactos(){
-        return view('contactos');
+        return view('institucional.contactos');
     }
 }
