@@ -9,4 +9,8 @@ class Product extends Model
     
     use SoftDeletes;
     protected $table ='product';
+
+    public function orderDetails(){
+        return $this->hasMany('App\OrderDetail');
+    }
 }

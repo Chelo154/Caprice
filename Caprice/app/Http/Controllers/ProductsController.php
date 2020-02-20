@@ -49,11 +49,13 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         $product = new Product;
-        $product->nombre = $request->nombre;
-        $product->cantidad = $request->cantidad;
-        $product->precio = $request->precio;
-        $product->tipo = $request->tipo;
+        $product->nombre = $request->input('nombre');
+        $product->cantidad = $request->input('cantidad');
+        $product->precio = $request->input('precio');
+        $product->tipo = $request->input('tipo');
         $product->save();
+        $message = true;
+        return view('empleados.products.create',['message'=>$message]);
     }
 
     /**
