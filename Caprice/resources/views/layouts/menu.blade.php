@@ -18,8 +18,8 @@
     <div class="bg-dark border-right" id="sidebar-wrapper">
       <div class="sidebar-heading letra-caprice">Caprice-Empleados </div>
       <div class="list-group list-group-flush ">
-        <a href="{{url ('/pr')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Lista de Productos</a>
-        <a href="{{url('/products/create')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nuevo Producto</a>
+        <a href="{{url ('/products')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Lista de Productos</a>
+        <a href="{{url('/products/create')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Aguregar Producto</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nueva Comanda</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Cerrar Sesión</a>
       </div>
@@ -37,12 +37,15 @@
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center ">
         <img src= https://i.ibb.co/T4zSm9P/Caprice-Logo.jpg class="img-fluid logo-navbar-principal">
         <a class="navbar-brand letra-caprice-blanca" href="#" style="text-indent: 0.5cm">Gestión Caprice</a>
-    </nav>
+      </nav>
+      <div>
+          @yield('content')
+        </div>
     </div>
     <!-- /#page-content-wrapper -->
-
   </div>
   <!-- /#wrapper -->
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
