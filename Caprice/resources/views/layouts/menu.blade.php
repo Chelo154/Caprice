@@ -1,4 +1,3 @@
-@extends('layouts.employees')
 
 <!doctype html>
 <html lang="en">
@@ -19,7 +18,7 @@
     <div class="bg-dark border-right" id="sidebar-wrapper">
       <div class="sidebar-heading letra-caprice">Caprice-Empleados </div>
       <div class="list-group list-group-flush ">
-        <a href="{{url ('/products')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Lista de Productos</a>
+        <a href="{{url ('/pr')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Lista de Productos</a>
         <a href="{{url('/products/create')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nuevo Producto</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nueva Comanda</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Cerrar Sesión</a>
