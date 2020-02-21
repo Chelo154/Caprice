@@ -12,6 +12,9 @@
             <th scope="col">Nombre</th>
             <th scope="col">Cantidad</th>
             <th scope="col">Precio</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
           </tr>
         </thead>
         <tbody>
@@ -21,9 +24,13 @@
             <td>{{$product->nombre}}</td>
             <td>{{$product->cantidad}}</td>
             <td>{{$product->precio}}</td>
+            <td>{{$product->tipo}}</td>             
             <td>
             <a name="" id="" class="btn btn-primary" href="{{route('products.edit',$product)}}" role="button">Editar Producto</a>
             </td>
+            <td>
+              <a name="" id="" class="btn btn-danger" href="" role="button">Elminar Producto</a>
+              </td>
           </tr>
          @endforeach
         </tbody>
