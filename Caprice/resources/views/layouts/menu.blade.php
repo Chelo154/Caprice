@@ -21,6 +21,7 @@
         <a href="{{url ('/products')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Lista de Productos</a>
         <a href="{{url('/products/create')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Aguregar Producto</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nueva Comanda</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nueva Mesa</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Cerrar Sesión</a>
       </div>
     </div>
