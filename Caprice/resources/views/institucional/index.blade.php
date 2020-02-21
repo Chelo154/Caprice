@@ -37,6 +37,17 @@
             </nav>
             </div>
             <!-- Inicio del contenido-->
+            <div class="col-md-6"><!--Intro Presentación-->
+                <h2 class="letra-caprice-blanca">¡Bienvenido a Caprice! </h2>
+                <hr class="linea-naranja"/>
+            </div><!--/Intro Presentacion-->
+            <div justify-content-center class="col-sm-12">
+                <h4 class="letra-info-blanca"  class="fa fa-align-center"  >
+                    Caprice, es un bar nuevo ubicado en Barrio Sur de San Miguel de Tucumán. especificamente en Chacabuco 437.<br>
+                    Vení y disfruta todos los días de la semana con buenas promos y  nuestro happy hour en pintas y comida de calidad!
+                    Te esperamos para que pases un agradeble momento o celebres tu cumple con amigos , familia , pareja!
+                </h4>
+            </div>
             <div class="col-md-6"><!--Intro Carousel-->
                 <h2 class="letra-caprice-blanca "> Para vos</h2>
                 <hr class="linea-naranja"/>
@@ -78,16 +89,14 @@
             </div>
         </div><!--/ColumnaCarousel -->
 
-        <div class="col-md-6"><!--Intro Presentación-->
-            <h2 class="letra-caprice-blanca">Bienvenido a Caprice </h2>
+
+        <div class="col-md-6">
+            <h3 class="letra-caprice-blanca">Ubicación de Caprice</h3>
             <hr class="linea-naranja"/>
-        </div><!--/Intro Presentacion-->
-        <div justify-content-center class="col-sm-12">
-            <h4 class="letra-info-blanca"  class="fa fa-align-center"  >
-                Caprice, es un bar nuevo ubicado en Barrio Sur de San Miguel de Tucumán. especificamente en Chacabuco 437.<br>
-                Vení y disfruta todos los días de la semana con buenas promos y  nuestro happy hour en pintas y comida de calidad!
-                Te esperamos para que pases un agradeble momento o celebres tu cumple con amigos , familia , pareja!
-            </h4>
+            <div class="col-md-12" >
+                <img src="../imagenes/mapa.jpg" alt="Mapa Ubicación Caprice" with="300" height="350" class="img-fluid imagen>
+            </div>
+
         </div>
         <!--/Contenido de la Pagina-->
     </div>
