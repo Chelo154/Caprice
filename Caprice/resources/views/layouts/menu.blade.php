@@ -27,9 +27,9 @@
       </div>
       <div class="list-group list-group-flush ">
         <a href="{{url ('/home')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Inicio</a>
-        <a href="{{url ('/products')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Lista de Productos</a>
-        <a href="{{url('/products/create')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Aguregar Producto</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nueva Comanda</a>
+        <a href="{{url ('/products')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Gestionar Productos</a>
+        <a href="{{url('/products/create')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Agregar Producto</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Crear Nueva Comanda</a>
         <form method="POST" action="{{route('logout')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">
           <button type="submit" class="btn btn-primary">
             @csrf

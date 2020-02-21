@@ -5,6 +5,16 @@
   <div class="row">
     <div class="col">
       <h3 class="text-center letra-negocio-blanca">Listado de Productos Registrados</h3>
+      <br>
+      <br>
+      
+    <button type="button" class="btn btn-success">
+    <a href="{{route('products.create')}}" class="letra-negocio-blanca">
+      Agregar Nuevo Producto
+    </a> 
+  </button>
+      <br>
+      <br>
       <table class="table table-dark letra-negocio-blanca">
         <thead>
           <tr>
@@ -29,7 +39,7 @@
             <a name="" id="" class="btn btn-primary" href="{{route('products.edit',$product)}}" role="button">Editar Producto</a>
             </td>
             <td>
-              <a name="" id="" class="btn btn-danger" href="" role="button">Elminar Producto</a>
+            <a name="" id="" class="btn btn-danger" href="{{route('products.show',$product)}}" role="button">Elminar Producto</a>
               </td>
           </tr>
          @endforeach

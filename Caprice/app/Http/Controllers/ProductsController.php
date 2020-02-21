@@ -48,26 +48,16 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        if(!is_null($request->input('id'))){
-            $product = Product::find($request->id);
-            //$product->id = $request->input('id');
-            $product->nombre = $request->input('nombre');
-            $product->cantidad = $request->input('cantidad');
-            $product->precio = $request->input('precio');
-            $product->tipo = $request->input('tipo');
-            $product->save();
-            $message = 'Producto actualizado exitosamente';
-        }
-       else{
+        
            $product = new Product;
            $product->nombre = $request->input('nombre');
-            $product->cantidad = $request->input('cantidad');
-            $product->precio = $request->input('precio');
-            $product->tipo = $request->input('tipo');
-            $product->save();
-            $message = 'Producto registrado exitosamente';
-       }
-       return view('empleados.products.create',['message'=>$message]);
+           $product->cantidad = $request->input('cantidad');
+           $product->precio = $request->input('precio');
+           $product->tipo = $request->input('tipo');
+           $product->save();
+           $message = 'Producto registrado exitosamente';
+           return redirect('/products');
+       
 
 
       
@@ -83,6 +73,11 @@ class ProductsController extends Controller
     public function show(Product $product)
     {
         //
+        if(Auth::check()){            
+            return view('empleados.products.show',['product'=>$product]);
+        }else{
+            return redirect()->guest('login');
+        }
     }
 
     /**
@@ -94,7 +89,8 @@ class ProductsController extends Controller
     public function edit(Product $product)
     {
         //
-        return view('empleados.products.edit',['product'=>$product]);
+        if(Auth::check())return view('empleados.products.edit',['product'=>$product]);
+        else return redirect()->guest('login');
     }
 
     /**
@@ -107,7 +103,12 @@ class ProductsController extends Controller
     public function update(Request $request, Product $product)
     {
 
-        return $request;
+        $product->nombre = $request->nombre;
+        $product->cantidad = $request->cantidad;
+        $product->precio = $request->precio;
+        $product->tipo = $request->tipo;
+        $product->save();
+        return redirect('/products');
     }
 
     /**
@@ -118,9 +119,7 @@ class ProductsController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
-
-        $productoABorrar= Product::find($product->id);
-        $productoABorrar->delete();
+        //        
+        $product->delete();
     }
 }

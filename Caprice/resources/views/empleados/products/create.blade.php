@@ -14,8 +14,7 @@
         <div class="col">
             <form class="form-group" method="POST" action="/products">
                 @csrf
-            <div class="form-group" >
-                <input type="hidden" name="id" value="">
+            <div class="form-group" >              
               <label for="">Nombre</label>
               <input type="text" name="nombre"  class="form-control" >              
               <label for="">Cantidad</label>
