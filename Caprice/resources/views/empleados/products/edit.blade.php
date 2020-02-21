@@ -8,6 +8,7 @@
     <div class="col">
     <form class="form-group" method="POST" action="/products/{{$product->slug}}">
         @csrf
+        
         <div class="form-group" >
             <input type="hidden" name="id"  class="form-control" value="{{$product->id}}" >
             <label for="">Nombre</label>

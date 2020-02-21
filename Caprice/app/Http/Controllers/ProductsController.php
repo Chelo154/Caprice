@@ -48,18 +48,30 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        $product = Product::find($request->id);
-        //$product->id = $request->input('id');
-        $product->nombre = $request->input('nombre');
-        $product->cantidad = $request->input('cantidad');
-        $product->precio = $request->input('precio');
-        $product->tipo = $request->input('tipo');
-        $product->save();
+        if(!is_null($request->input('id'))){
+            $product = Product::find($request->id);
+            //$product->id = $request->input('id');
+            $product->nombre = $request->input('nombre');
+            $product->cantidad = $request->input('cantidad');
+            $product->precio = $request->input('precio');
+            $product->tipo = $request->input('tipo');
+            $product->save();
+            $message = 'Producto actualizado exitosamente';
+        }
+       else{
+           $product = new Product;
+           $product->nombre = $request->input('nombre');
+            $product->cantidad = $request->input('cantidad');
+            $product->precio = $request->input('precio');
+            $product->tipo = $request->input('tipo');
+            $product->save();
+            $message = 'Producto registrado exitosamente';
+       }
+       return view('empleados.products.create',['message'=>$message]);
 
 
-
-        $message = true;
-        return view('empleados.products.create',['message'=>$message]);
+      
+       
     }
 
     /**

@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     @if (isset($message))
-        <script>alert('Producto Registrado Exitosamente')</script>
+        <script>alert('{{$message}}')</script>
     @endif
         
    
@@ -15,6 +15,7 @@
             <form class="form-group" method="POST" action="/products">
                 @csrf
             <div class="form-group" >
+                <input type="hidden" name="id" value="">
               <label for="">Nombre</label>
               <input type="text" name="nombre"  class="form-control" >              
               <label for="">Cantidad</label>

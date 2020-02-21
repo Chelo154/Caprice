@@ -12,17 +12,31 @@
   </head>
   <body>
 
-  <div class="d-flex toggled" id="wrapper">
+  <div class="d-flex " id="wrapper">
 
     <!-- Sidebar -->
     <div class="bg-dark border-right" id="sidebar-wrapper">
       <div class="sidebar-heading letra-caprice">Caprice-Empleados </div>
+      <hr class="linea-naranja">
+      <div class="card bg-dark">
+        <img class="card-img-top img-fluid rounded-circle" src="https://i.ibb.co/ZSqZyhJ/Avatar-usuario.png" alt="">
+        <div class="card-body">
+        <h4 class="card-title letra-negocio-blanca">{{Auth::user()->name}}</h4>
+        <p class="card-text letra-negocio-blanca">{{Auth::user()->email}}</p>
+        </div>
+      </div>
       <div class="list-group list-group-flush ">
+        <a href="{{url ('/home')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Inicio</a>
         <a href="{{url ('/products')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Lista de Productos</a>
         <a href="{{url('/products/create')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Aguregar Producto</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nueva Comanda</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Cerrar Sesión</a>
+        <form method="POST" action="{{route('logout')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">
+          <button type="submit" class="btn btn-primary">
+            @csrf
+            Cerrar Sesion</button>
+        </form>       
       </div>
+    
     </div>
     <!-- /#sidebar-wrapper -->
 
@@ -57,6 +71,7 @@
     <link href="{!! asset('css/simple-sidebar.css') !!}" rel="stylesheet">
     <link href="{!! asset('css/layoutemployee.css') !!}" rel="stylesheet">
     <link href="{!! asset('css/fonts.css') !!}" rel="stylesheet">
+    <link href="{!! asset('css/estilosbase.css') !!}" rel="stylesheet">
     <!-- Menu Toggle Script -->
     <script>
         $("#menu-toggle").click(function(e) {
