@@ -6,11 +6,10 @@
     </div>
 
     <div class="col">
-    <form class="form-group" method="POST" action="/products/{{$product->slug}}">
+    <form class="form-group" method="POST" action="{{route('products.update',['product'=>$product])}}">
         @csrf
-        
-        <div class="form-group" >
-            <input type="hidden" name="id"  class="form-control" value="{{$product->id}}" >
+        @method('PUT')
+        <div class="form-group" >           
             <label for="">Nombre</label>
           <input type="text" name="nombre"  class="form-control" value="{{$product->nombre}}" >
           <label for="">Cantidad</label>
