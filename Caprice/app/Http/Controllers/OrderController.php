@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 
 class OrderController extends Controller
@@ -24,7 +25,7 @@ class OrderController extends Controller
      public function index()
      {
         if (Auth::check()){
-            return view('comanda.index');
+            return view('empleados.comanda.index');
         }else{
             return redirect()->guest('login');
 
