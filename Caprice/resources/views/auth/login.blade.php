@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
+
+
 @section('content')
-<div class="container">
+<body>
+<div class="container" {{url("https://i.ibb.co/fXsYNfS/fondo-madera.jpg")}}>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -70,4 +73,5 @@
         </div>
     </div>
 </div>
+</body>
 @endsection

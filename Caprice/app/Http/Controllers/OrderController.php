@@ -14,17 +14,24 @@ class OrderController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function newOrder(){
-        
+
         $order = new Order;
         $order->fechaComanda = Carbon::now();
         $order->total = 0.00;
-    
+
 
     }
      public function index()
-    {
-        //
+     {
+        if (Auth::check()){
+            return view('comanda.index');
+        }else{
+            return redirect()->guest('login');
+
+        }
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -34,6 +41,8 @@ class OrderController extends Controller
     public function create()
     {
         //
+
+
     }
 
     /**

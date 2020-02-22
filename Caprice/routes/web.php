@@ -19,5 +19,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resources([
     'products'=>'ProductsController',
     'employees'=>'EmployeesController',
-    'bar'=>'BarController'
+    'bar'=>'BarController',
+    'comanda'=>'OrderController'
     ]);
