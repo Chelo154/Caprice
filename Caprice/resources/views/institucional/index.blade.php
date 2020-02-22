@@ -89,18 +89,44 @@
             </div>
         </div><!--/ColumnaCarousel -->
 
+        <div class="container">
+            <h2 class="letra-caprice-blanca">Ubicación de Caprice</h2>
+                    <hr class="linea-naranja"/>
+            <div class="row">
+                <div class="col-md-6">
 
+<<<<<<< HEAD
         <div class="col-md-6">
             <h3 class="letra-caprice-blanca">Ubicación de Caprice</h3>
             <hr class="linea-naranja"/>
             <div class="col-sm-12 justify-content-center" >
                 <img src="../imagenes/mapa.jpg" alt="Mapa Ubicación Caprice" with="300" height="350" class="img-fluid justify-content-center">
+=======
+                        <img src="../imagenes/mapa2.png" alt="Mapa Ubicación Caprice" class="img-fluid "style='align:center;text-align:center'>
+                </div>
+                <div class= "col-md-6">
+                    <h3 class="letra-caprice"  class="text-center">Encuentranos en</h3>
+                    <h4 class="letra-info-blanca" class="text-center">  Chacabuco 437- San Miguel de Tucumán </h4>
+                </div>
+>>>>>>> d231964d33b3e7e2f1567223299fb375b269215c
             </div>
-
         </div>
         <!--/Contenido de la Pagina-->
     </div>
 </div>
+<footer class="border-top">
+<div class="container">
+    <div class=row>
+        <div class="col-md-6">
+            <h5 class="letra-info-blanca">Para ingresar a la Gestión de Caprice ,presione el botón</h5>
+        </div>
+        <div class="col-md-6">
+            <a href={{url("/login")}}><input type="button" value="LOGIN"></a>
+        </div>
+    </div>
+</div>
+    <h6 class="text-center"><i class="fa fa-copyright" aria-hidden="true">Copyright® todos los derechos reservados</i></h6>
+</footer>
 <link href="{!! asset('css/estilosbase.css') !!}" rel="stylesheet">
 <link href="{!! asset('css/fonts.css') !!}" rel="stylesheet">
 
