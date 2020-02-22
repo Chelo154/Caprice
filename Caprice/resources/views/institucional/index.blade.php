@@ -93,8 +93,8 @@
         <div class="col-md-6">
             <h3 class="letra-caprice-blanca">Ubicación de Caprice</h3>
             <hr class="linea-naranja"/>
-            <div class="col-md-12" >
-                <img src="../imagenes/mapa.jpg" alt="Mapa Ubicación Caprice" with="300" height="350" class="img-fluid imagen>
+            <div class="col-sm-12 justify-content-center" >
+                <img src="../imagenes/mapa.jpg" alt="Mapa Ubicación Caprice" with="300" height="350" class="img-fluid justify-content-center">
             </div>
 
         </div>
