@@ -18,5 +18,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resources([
     'products'=>'ProductsController',
-    'employees'=>'EmployeesController'
+    'employees'=>'EmployeesController',
+    'bar'=>'BarController'
     ]);

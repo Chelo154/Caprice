@@ -27,16 +27,10 @@
       </div>
       <div class="list-group list-group-flush ">
         <a href="{{url ('/home')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Inicio</a>
-<<<<<<< HEAD
         <a href="{{url ('/products')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Gestionar Productos</a>
-        <a href="{{url('/products/create')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Agregar Producto</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Crear Nueva Comanda</a>
-=======
-        <a href="{{url ('/products')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Lista de Productos</a>
         <a href="{{url('/products/create')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Aguregar Producto</a>
         <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nueva Comanda</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nueva Mesa</a>
->>>>>>> 6d79afa08475eec8e913a1e8d4f2070eb61c6cee
+        <a href="{{url('/bar')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Gestionar  Mesas</a>
         <form method="POST" action="{{route('logout')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">
           <button type="submit" class="btn btn-primary">
             @csrf

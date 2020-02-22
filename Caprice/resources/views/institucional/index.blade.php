@@ -94,9 +94,7 @@
                     <hr class="linea-naranja"/>
             <div class="row">
                 <div class="col-md-6">
-
                         <img src="../imagenes/mapa2.png" alt="Mapa Ubicación Caprice" class="img-fluid" width="fit-content" height= "fit-content">
-
                 </div>
                 <div class= "col-md-6">
                     <h3 class="letra-caprice"  class="text-center">Encuentranos en</h3>
@@ -107,19 +105,6 @@
         <!--/Contenido de la Pagina-->
     </div>
 </div>
-<footer class="border-top">
-<div class="container">
-    <div class=row>
-        <div class="col-md-6">
-            <h5 class="letra-info-blanca">Para ingresar a la Gestión de Caprice ,presione el botón</h5>
-        </div>
-        <div class="col-md-6">
-            <a href={{url("/login")}}><input type="button" value="LOGIN"></a>
-        </div>
-    </div>
-</div>
-    <h6 class="text-center"><i class="fa fa-copyright" aria-hidden="true">Copyright® todos los derechos reservados</i></h6>
-</footer>
 <link href="{!! asset('css/estilosbase.css') !!}" rel="stylesheet">
 <link href="{!! asset('css/fonts.css') !!}" rel="stylesheet">
 
