@@ -94,7 +94,7 @@
                     <hr class="linea-naranja"/>
             <div class="row">
                 <div class="col-md-6">
-                        <img src="../imagenes/mapa2.png" alt="Mapa Ubicación Caprice" class="img-fluid" width="fit-content" height= "fit-content">
+                        <img src="../imagenes/mapa2.png" alt="Mapa Ubicación Caprice" class="img-fluid" >
                 </div>
                 <div class= "col-md-6">
                     <h3 class="letra-caprice"  class="text-center">Encuentranos en</h3>
