@@ -19,7 +19,8 @@ class OrderDetail extends Model
     }
     public function calcularSubTotal(){
         if($this->subtotal == 0){
-            $this->subtotal = $this->product()->precio * $this->cantidad;            
+            $this->subtotal = $this->product->precio * $this->cantidad;
+            $this->save();            
         }
         return $this->subtotal;
     }    

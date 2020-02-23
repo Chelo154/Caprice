@@ -6,6 +6,9 @@ use App\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use App\Bar;
+use App\Product;
+use App\OrderDetail;
 
 class OrderController extends Controller
 {
@@ -14,25 +17,22 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function newOrder(){
-
+    public function index()
+    {
+        //
+        $mesas = Bar::where('estado','ocupado')->get();
+        $estado = 'comanda';
+        $total = 0;
         $order = new Order;
         $order->fechaComanda = Carbon::now();
-        $order->total = 0.00;
-
-
-    }
-     public function index()
-     {
-        if (Auth::check()){
-            return view('empleados.comanda.index');
-        }else{
-            return redirect()->guest('login');
-
+        $order->total = $total;
+        $order->estadoComanda = $estado;
+        $order->save();
+        if(Auth::check()){
+            return view('empleados.comanda.index',['order'=>$order,'mesas'=>$mesas]);
         }
+        else return redirect()->guest('login');
     }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -42,8 +42,6 @@ class OrderController extends Controller
     public function create()
     {
         //
-
-
     }
 
     /**
@@ -90,6 +88,45 @@ class OrderController extends Controller
     {
         //
     }
+    public function agregarMesa(Request $request,Order $order){
+        
+        $mesa = Bar::find($request->idmesa);
+        $order->bar()->associate($mesa);
+        $order->save();
+        $mesa->orders()->save($order);
+        $mesa->save();
+        return view('empleados.comanda.index',['order'=>$order]);
+    }
+     public function buscarProducto(Request $request,Order $order){
+         $producto= Product::find($request->idproducto);
+         return view('empleados.comanda.index',['order'=>$order,'producto'=>$producto]);
+     }
+     public function agregarProducto(Request $request,Order $order,Product $producto){
+         
+        /*Creacion de Linea de Venta*/ 
+        $detalle = new OrderDetail;  
+        $detalle->cantidad = $request->cantidad;        
+        $detalle->save();
+        $detalle->product()->associate($producto)->save();
+        $detalle->order()->associate($order)->save();
+        $producto->orderDetails()->save($detalle);
+        /*Agregacion a la comanda*/
+        $order->orderDetails()->save($detalle);
+        $order->calcularTotal();
+        $order->save();        
+        return view('empleados.comanda.index',['order'=>$order]);
+     }
+     public function eliminarProducto(Request $request, Order $order, OrderDetail $orderDetail){
+        $orderDetail->delete();   
+        $order->calcularTotal();     
+        return  view('empleados.comanda.index',['order'=>$order]);
+        
+     }
+     public function registrarComanda(Request $request, Order $order){
+         $order->save();
+         return redirect('/home');
+     }
+
 
     /**
      * Remove the specified resource from storage.

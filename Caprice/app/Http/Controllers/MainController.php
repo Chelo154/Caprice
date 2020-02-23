@@ -8,7 +8,7 @@ class MainController extends Controller{
         return view('institucional.index');
     }
     public function foodAndBeer(){
-        return view('intitucional.foodandbeer');
+        return view('institucional.foodandbeer');
     }
     public function nosotros(){
         return view('institucional.quienesSomos');

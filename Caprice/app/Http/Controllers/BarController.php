@@ -79,7 +79,13 @@ class BarController extends Controller
      */
     public function update(Request $request, Bar $bar)
     {
-        $bar->estado = $request->estado;
+        $ocupado = 'ocupado';
+        $libre='libre';
+        if($bar->estado =='libre'){
+            $bar->estado = $ocupado;
+        }else{
+            $bar->estado = $libre;
+        }
         $bar->save();
         return redirect('/bar');
     }

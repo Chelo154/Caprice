@@ -20,5 +20,12 @@ Route::resources([
     'products'=>'ProductsController',
     'employees'=>'EmployeesController',
     'bar'=>'BarController',
-    'comanda'=>'OrderController'
+    'order'=>'OrderController'
     ]);
+Route::put('/order/{order}','OrderController@agregarMesa')->name('order.agregarmesa');
+Route::put('/order/buscar/{order}','OrderController@buscarProducto')->name('order.buscarproducto');
+Route::put('/order/agregar/{order}/{producto}','OrderController@agregarProducto')->name('order.agregarproducto');
+Route::put('/order/eliminar/{order}/{orderDetail}','OrderController@eliminarProducto')->name('order.eliminarproducto');
+Route::put('/order/registar/{order}','OrderController@registrarComanda')->name('order.registrarcomanda');
+
+

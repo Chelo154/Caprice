@@ -26,15 +26,13 @@
                     @if ($mesa->estado == 'libre')
                     <form action="{{route('bar.update',$mesa)}}" method="POST">
                        @method('PUT')
-                       @csrf
-                       <input type="hidden" name="estado" value="ocupado">
+                       @csrf                       
                        <button type="submit" class="btn btn-danger letra-negocio-blanca">Ocupar Mesa</button>
                     </form>
                     @else
                     <form action="{{route('bar.update',$mesa)}}" method="POST">
                         @method('PUT')
-                        @csrf
-                        <input type="hidden" name="estado" value="libre">
+                        @csrf                        
                         <button type="submit" class="btn btn-success letra-negocio-blanca">Liberar Mesa</button>
                      </form>   
                     @endif

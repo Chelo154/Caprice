@@ -24,9 +24,10 @@ class Order extends Model
         
         $totalAPagar = 0.0;
         foreach($this->orderDetails as $orderDetail){
-            $totalAPagar += $total + $orderDetail->calcularSubTotal();
+            $totalAPagar += $totalAPagar + $orderDetail->calcularSubTotal();
         }
         $this->total = $totalAPagar;
+        $this->save();
     
     }
 }

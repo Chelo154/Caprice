@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Bar;
 
 class ProductsController extends Controller
 {
@@ -16,6 +17,7 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::all();
+        
         if(Auth::check()){
 
             return view('empleados.products.index',['products'=>$products]);
