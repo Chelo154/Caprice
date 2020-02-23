@@ -131,7 +131,7 @@
                  
                 </tbody>
               </table>
-            <h3 class="letra-negocio-blanca">Total a Pagar: ${{$order->total}}</h3>
+            <h3 class="letra-negocio-blanca text-center">Total a Pagar: ${{$order->total}}</h3>
             <hr class="linea-naranja">
              </div>
              <div class="col-md-6">
