@@ -63,7 +63,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+
     }
 
     /**
@@ -89,7 +89,7 @@ class OrderController extends Controller
         //
     }
     public function agregarMesa(Request $request,Order $order){
-        
+
         $mesa = Bar::find($request->idmesa);
         $order->bar()->associate($mesa);
         $order->save();
@@ -102,12 +102,12 @@ class OrderController extends Controller
          return view('empleados.comanda.index',['order'=>$order,'producto'=>$producto]);
      }
      public function agregarProducto(Request $request,Order $order,Product $producto){
-         
-        /*Creacion de Linea de Venta*/ 
+
+        /*Creacion de Linea de Venta*/
         $subtotal =0;
-        $detalle = new OrderDetail;  
+        $detalle = new OrderDetail;
         $detalle->cantidad = $request->cantidad;
-        $detalle->subtotal = $subtotal;        
+        $detalle->subtotal = $subtotal;
         $detalle->save();
         $detalle->product()->associate($producto)->save();
         $detalle->order()->associate($order)->save();
@@ -115,14 +115,14 @@ class OrderController extends Controller
         /*Agregacion a la comanda*/
         $order->orderDetails()->save($detalle);
         $order->calcularTotal();
-        $order->save();        
+        $order->save();
         return view('empleados.comanda.index',['order'=>$order]);
      }
      public function eliminarProducto(Request $request, Order $order, OrderDetail $orderDetail){
-        $orderDetail->delete();   
-        $order->calcularTotal();     
+        $orderDetail->delete();
+        $order->calcularTotal();
         return  view('empleados.comanda.index',['order'=>$order]);
-        
+
      }
      public function registrarComanda(Request $request, Order $order){
          $order->save();

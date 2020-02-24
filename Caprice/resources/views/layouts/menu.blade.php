@@ -30,6 +30,7 @@
         <a href="{{url ('/products')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Gestionar Productos</a>
         <a href="{{url('/bar')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Gestionar  Mesas</a>
         <a href="{{url('/order')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nueva Comanda</a>
+        <a href="{{url()}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Listar Comandas</a>
         <form method="POST" action="{{route('logout')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">
           <button type="submit" class="btn btn-warning">
             @csrf
