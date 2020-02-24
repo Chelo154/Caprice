@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+<body>
 
   <div class="d-flex " id="wrapper">
 
@@ -28,11 +28,11 @@
       <div class="list-group list-group-flush ">
         <a href="{{url ('/home')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Inicio</a>
         <a href="{{url ('/products')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Gestionar Productos</a>
-        <a href="{{url('/products/create')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Aguregar Producto</a>
-      <a href="{{url('/order')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nueva Comanda</a>
         <a href="{{url('/bar')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Gestionar  Mesas</a>
+        <a href="{{url('/order')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Nueva Comanda</a>
+        <a href="{{url('')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">Listar Comandas</a>
         <form method="POST" action="{{route('logout')}}" class="list-group-item list-group-item-action bg-dark letra-negocio-blanca">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-warning">
             @csrf
             Cerrar Sesion</button>
         </form>
@@ -46,7 +46,7 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-dark border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Ver/Ocultar Menu</button>
+        <button class="btn btn-warning" id="menu-toggle">Ver/Ocultar Menu</button>
       </nav>
 
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center ">
