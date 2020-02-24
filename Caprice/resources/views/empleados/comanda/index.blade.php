@@ -143,12 +143,6 @@
             </form>
             <br>
             <br>
-            <form action="" method="POST">
-              @csrf
-              @method('PUT')
-              <button type="submit" class="btn btn-warning">Cancelar Comanda</button>
-            </form>
-            </div>
 
 
                  </div>

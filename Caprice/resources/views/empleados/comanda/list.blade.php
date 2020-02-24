@@ -10,7 +10,7 @@
       <table class="table  table-responsive-sm table-dark letra-negocio-blanca">
         <thead>
           <tr>
-            <th scope="col">Núerno Comanda</th>
+            <th scope="col">Numero Comanda</th>
             <th scope="col">Empleado</th>
             <th scope="col">Fecha</th>
             <th scope="col">Numero de Mesa</th>
@@ -26,7 +26,14 @@
             <td>{{$order->id}}</td>
           <td>{{$order->employee->apellidoEmpleado}},{{$order->employee->nombreEmpleado}}</td>
             <td>{{$order->fechaComanda}}</td>
-            <td>{{$order->bar->id}}</td>
+            <td class="text-center">
+              @if (is_null($order->bar))
+                  Nulo
+              @else
+              {{$order->bar->id}}
+              @endif
+             
+            </td>
             <td>{{$order->total}}</td>
             <td>{{$order->estadoComanda}}</td>            
             <td>
