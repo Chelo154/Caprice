@@ -15,7 +15,7 @@
   </button>
       <br>
       <br>
-      <table class="table  table-responsive table-dark letra-negocio-blanca ">
+      <table class="table  table-responsive-sm table-dark letra-negocio-blanca ">
         <thead>
           <tr>
             <th scope="col ">Id</th>

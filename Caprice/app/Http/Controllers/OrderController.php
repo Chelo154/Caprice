@@ -37,6 +37,7 @@ class OrderController extends Controller
         }
         else return redirect()->guest('login');
     }
+   
 
     /**
      * Show the form for creating a new resource.
@@ -67,7 +68,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-
+        return view('empleados.comanda.show',['order'=>$order]);
     }
 
     /**
@@ -132,6 +133,25 @@ class OrderController extends Controller
          $order->save();
          return redirect('/home');
      }
+     public function pagarComanda(Request $request,Order $order){
+         $estado='pedido';
+         $order->estadoComanda = $estado;
+         $order->save();
+         return redirect('order/listar');
+     }
+     public function cancelarComanda(Request $request,Order $order){
+        $estado='cancelado';
+        $order->estadoComanda = $estado;
+        $order->save();
+        return redirect('order/listar');
+    }
+
+     public function listar(){        
+        $orders = Order::where('estadoComanda','!=','cancelado')->get();               
+        return view('empleados.comanda.list',['orders'=>$orders]);
+    }    
+    
+    
 
 
     /**
@@ -144,4 +164,6 @@ class OrderController extends Controller
     {
         //
     }
+
+    
 }

@@ -101,7 +101,7 @@
              </div>
              <div class="col-sm-12 justify-content-center">
               <h3 class="letra-negocio-blanca">Listado de Productos Agregados</h3>
-              <table class="table">
+              <table class="table table-responsive-sm">
                 <thead class="letra-negocio-blanca">
                   <tr>
                     <th>Id</th>1º

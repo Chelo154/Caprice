@@ -7,7 +7,7 @@
       <br>
       <br>
 
-      <table class="table  table-responsive table-dark letra-negocio-blanca">
+      <table class="table  table-responsive-sm table-dark letra-negocio-blanca">
         <thead>
           <tr>
             <th scope="col">Núerno Comanda</th>
@@ -17,19 +17,32 @@
             <th scope="col">Total</th>
             <th scope="col">Estado</th>
             <th scope="col">Detalle</th>
+            <th scope="col">Opciones</th>
           </tr>
         </thead>
-        <tbody>
-          @foreach($order as $order)
+        --<tbody>
+          @foreach($orders as $order)
           <tr>
             <td>{{$order->id}}</td>
-            <td>{{$order->}}</td>
+          <td>{{$order->employee->apellidoEmpleado}},{{$order->employee->nombreEmpleado}}</td>
             <td>{{$order->fechaComanda}}</td>
-            <td>{{$order->}}</td>
+            <td>{{$order->bar->id}}</td>
             <td>{{$order->total}}</td>
-            <td>{{$order->estadoComanda}}</td>
+            <td>{{$order->estadoComanda}}</td>            
             <td>
-            <a name="" id="" class="btn btn-warning" href="{{route('')}}" role="button">Detalle Comanda></a>
+            <a name="" id="" class="btn btn-warning" href="{{route('order.show',$order)}}" role="button">Detalle Comanda</a>
+            </td>
+            <td>
+            <form action="{{route('order.pagarcomanda',$order)}}" method="POST">
+              @csrf
+              @method('PUT')
+                <button type="submit" class="btn btn-success">Confirmar Pago Comanda</button>
+              </form>
+            <form action="{{route('order.cancelarcomanda',$order)}}" method="POST">
+              @csrf
+              @method('PUT')
+                <button type="submit" class="btn btn-danger">Cancelar Comanda</button>
+              </form>
             </td>
           </tr>
          @endforeach
@@ -39,6 +52,6 @@
     </div>
   </div>
 </div>
-
+@endsection
 
 

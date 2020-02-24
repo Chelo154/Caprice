@@ -16,6 +16,7 @@ Route::get('contactanos','MainController@contactos');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/order/listar','OrderController@listar')->name('order.listarcomandas');
 Route::resources([
     'products'=>'ProductsController',
     'employees'=>'EmployeesController',
@@ -27,5 +28,8 @@ Route::put('/order/buscar/{order}','OrderController@buscarProducto')->name('orde
 Route::put('/order/agregar/{order}/{producto}','OrderController@agregarProducto')->name('order.agregarproducto');
 Route::put('/order/eliminar/{order}/{orderDetail}','OrderController@eliminarProducto')->name('order.eliminarproducto');
 Route::put('/order/registar/{order}','OrderController@registrarComanda')->name('order.registrarcomanda');
+Route::put('/order/pagar/{order}','OrderController@pagarComanda')->name('order.pagarcomanda');
+Route::put('/order/cancelar/{order}','OrderController@cancelarComanda')->name('order.cancelarcomanda');
+
 
 
