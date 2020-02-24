@@ -13,15 +13,15 @@
                   <label for="">Dni</label>
                   <input type="text" name="dni" id="" class="form-control" placeholder="" aria-describedby="helpId">
                   <label for="">Nombre</label>
-                  <input type="text" name="nombreEmpleado" id="" class="form-control" placeholder="" aria-describedby="helpId"> 
+                  <input type="text" name="nombreEmpleado" id="" class="form-control" placeholder="" aria-describedby="helpId">
                   <label for="">Apellido</label>
-                  <input type="text" name="apellidoEmpleado" id="" class="form-control" placeholder="" aria-describedby="helpId"> 
+                  <input type="text" name="apellidoEmpleado" id="" class="form-control" placeholder="" aria-describedby="helpId">
                   <label for="">Telefono</label>
                   <input type="text" name="telefono" id="" class="form-control" placeholder="" aria-describedby="helpId">
                   <label for="">Domicilio</label>
-                  <input type="text" name="domicilio" id="" class="form-control" placeholder="" aria-describedby="helpId">                
+                  <input type="text" name="domicilio" id="" class="form-control" placeholder="" aria-describedby="helpId">
                 </div>
-                <button type="submit" class="btn btn-primary">Completar Datos</button>
+                <button type="submit" class="btn btn-warning">Completar Datos</button>
             </form>
             </div>
         </div>
