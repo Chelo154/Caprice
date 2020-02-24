@@ -54,9 +54,8 @@ class EmployeesController extends Controller
         $empleado->user()->save($user);
         $empleado->save();
         $user->employee()->associate($empleado);
-        $user->save();
-        
-        return $user;
+        $user->save();        
+        return redirect('/home');
     }
 
     /**

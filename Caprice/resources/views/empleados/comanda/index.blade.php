@@ -32,7 +32,7 @@
                         <h5 class="letra-negocio-blanca"> Fecha de Comanda : {{$order->fechaComanda}}
                       </div>                      
                       <div class="col-md-6">                        
-                        <h5 class="letra-negocio-blanca"> Empleado: {{Auth::user()->name}}
+                        <h5 class="letra-negocio-blanca"> Empleado: {{$order->employee->apellidoEmpleado}},{{$order->employee->nombreEmpleado}}
                       </div>                      
                       <div class="col-md-6">               
                           @if (is_null($order->bar))

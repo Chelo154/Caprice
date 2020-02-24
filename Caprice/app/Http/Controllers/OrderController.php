@@ -20,6 +20,7 @@ class OrderController extends Controller
     public function index()
     {
         //
+        $empleado = Auth::user()->employee;
         $mesas = Bar::where('estado','ocupado')->get();
         $estado = 'comanda';
         $total = 0;
@@ -28,6 +29,9 @@ class OrderController extends Controller
         $order->total = $total;
         $order->estadoComanda = $estado;
         $order->save();
+        $order->employee()->associate($empleado);
+        $order->save();
+        $empleado->orders()->save($order);
         if(Auth::check()){
             return view('empleados.comanda.index',['order'=>$order,'mesas'=>$mesas]);
         }

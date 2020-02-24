@@ -30,8 +30,8 @@ class AgregarForaneas extends Migration
         });
         Schema::table('users', function (Blueprint $table) {
             /*Foraneas*/
-            $table->unsignedBigInteger('id_empleado')->nullable($value = true);
-            $table->foreign('id_empleado')->references('id')->on('employee');
+            $table->unsignedBigInteger('employee_id')->nullable($value = true);
+            $table->foreign('employee_id')->references('id')->on('employee');
         });
     }
 
