@@ -7,10 +7,10 @@
     </div>
   </div>
 </div>
-<div class="container bg-secondary "  >
-    <div class=row>
+<div class="container bg-dark "  >
+    <div class="row">
       <div class="col" class="text center">
-          <nav class="navbar navbar-expand-sm navbar-dark bg-secondary justify-content-center ">
+          <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center ">
           <img src= https://i.ibb.co/T4zSm9P/Caprice-Logo.jpg class="img-fluid logo-navbar-principal" width="100" height="100">
         </nav>
         <h4 class="text-center letra-info-blanca">Chacabuco 437-San Miguel de Tucumán</h4><br>
