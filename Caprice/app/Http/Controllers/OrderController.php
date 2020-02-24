@@ -104,8 +104,10 @@ class OrderController extends Controller
      public function agregarProducto(Request $request,Order $order,Product $producto){
          
         /*Creacion de Linea de Venta*/ 
+        $subtotal =0;
         $detalle = new OrderDetail;  
-        $detalle->cantidad = $request->cantidad;        
+        $detalle->cantidad = $request->cantidad;
+        $detalle->subtotal = $subtotal;        
         $detalle->save();
         $detalle->product()->associate($producto)->save();
         $detalle->order()->associate($order)->save();

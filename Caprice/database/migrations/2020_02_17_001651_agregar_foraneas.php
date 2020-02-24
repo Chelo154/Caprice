@@ -16,22 +16,22 @@ class AgregarForaneas extends Migration
         
         Schema::enableForeignKeyConstraints();
         Schema::table('orderDetail', function (Blueprint $table) {
-            $table->unsignedBigInteger('order_id');
+            $table->unsignedBigInteger('order_id')->nullable($value = true);
             $table->foreign('order_id')->references('id')->on('order');
-            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('product_id')->nullable($value = true);
             $table->foreign('product_id')->references('id')->on('product');
         });
         Schema::table('order', function (Blueprint $table) {
             /*Foraneas*/
-           $table->unsignedBigInteger('bar_id');
+           $table->unsignedBigInteger('bar_id')->nullable($value = true);
             $table->foreign('bar_id')->references('id')->on('bar');
-            $table->unsignedBigInteger('employee_id');
+            $table->unsignedBigInteger('employee_id')->nullable($value = true);
             $table->foreign('employee_id')->references('id')->on('employee');
         });
         Schema::table('users', function (Blueprint $table) {
             /*Foraneas*/
-            $table->unsignedBigInteger('id_empleado');
-            $table->foreign('id_empleado')->references('id')->on('employee')->nullable();
+            $table->unsignedBigInteger('id_empleado')->nullable($value = true);
+            $table->foreign('id_empleado')->references('id')->on('employee');
         });
     }
 
