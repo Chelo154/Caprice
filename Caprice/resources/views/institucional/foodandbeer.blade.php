@@ -40,7 +40,6 @@
              </nav>
             </div>
             <!-- Inicio del contenido-->
-            <h1 class="letra-caprice">Food and Beer</h1>
             <div class="col-md-12"><!--ColumnaCarousel -->
                 <div id="carouselId" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -51,8 +50,8 @@
                         <li data-target="#carouselId" data-slide-to="4"></li>
                     </ol>
 
-                    <h2 class="letra-caprice">Bebidas</h2>
-
+                    <h2 class="letra-caprice-blanca m-3">Bebidas</h2>
+                    <hr class="linea-naranja">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <img src="https://scontent.ftuc1-1.fna.fbcdn.net/v/t1.0-9/s960x960/47491955_286955521934476_795235176497020928_o.jpg?_nc_cat=107&_nc_ohc=L4hXcplCb44AX_UNZg7&_nc_ht=scontent.ftuc1-1.fna&_nc_tp=7&oh=ac4f9dbb80d29489bf219deced02fe76&oe=5EBE56B7" alt="First slide" class="img-fluid imagen-carousel-1">
@@ -91,8 +90,8 @@
                                 <li data-target="#carouselId" data-slide-to="4"></li>
                             </ol>
 
-                            <h2 class="letra-caprice">Platos</h2>
-
+                            <h2 class="letra-caprice-blanca m-3">Platos</h2>
+                            <hr class="linea-naranja">
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active">
                                     <img src="ohttps://scontent.ftuc1-1.fna.fbcdn.net/v/t1.0-9/s960x960/61885730_361930064437021_1352313965459275776_o.jpg?_nc_cat=106&_nc_ohc=EATIV7mu3u8AX-d3s-m&_nc_ht=scontent.ftuc1-1.fna&_nc_tp=7&oh=e6f151d9aa94f5c4c426c741a9ce39d8&oe=5F008CFD" alt="First slide" class="img-fluid imagen-carousel-1">
@@ -122,9 +121,9 @@
                             </a>
         </div>
     </div>
-<div></div>
+    @endsection
 </div>
 <link href="{!! asset('css/estilosbase.css') !!}" rel="stylesheet">
 <link href="{!! asset('css/fonts.css') !!}" rel="stylesheet">
 
-@endsection
+

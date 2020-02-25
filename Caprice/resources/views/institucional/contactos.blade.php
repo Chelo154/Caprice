@@ -6,7 +6,6 @@
 @section('content')
 
 
-
 <div class="container fondo-base-1" >
     <div class="container">
         <div class="row">
@@ -42,8 +41,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h1 class="letra-caprice text-center">¿Deseas Contactarnos?</h1>
-                        <hr class="linea-gris">
+                        <h2 class="letra-caprice-blanca text-center">¿Deseas Contactarnos?</h2>
+                        <hr class="linea-naranja">
                     </div>
                     <div class="col-sm-12">
                         <h3 class="letra-caprice-blanca">Puedes contactarnos fácilmete por cualquiera de nuestras redes sociales</h3>

@@ -48,9 +48,8 @@
                     Te esperamos para que pases un agradeble momento o celebres tu cumple con amigos , familia , pareja!
                 </h4>
             </div>
+            <hr class="linea-naranja"/>
             <div class="col-md-6"><!--Intro Carousel-->
-                <h2 class="letra-caprice-blanca "> Para vos</h2>
-                <hr class="linea-naranja"/>
             </div><!--/Intro Carousel-->
             <div class="col-md-12"><!--ColumnaCarousel -->
                 <div id="carouselId" class="carousel slide" data-ride="carousel">

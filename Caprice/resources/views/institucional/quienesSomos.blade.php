@@ -37,13 +37,17 @@
             </nav>
             </div>
             <!-- Inicio del contenido-->
-            <h1 class="letra-caprice">¿Quienés somos?</h1>
+            <h2 class="letra-caprice-blanca mt-3">¿Quienés somos?</h2>
+            <hr class="linea-naranja">
             <div class="col-sm-12">
                 <h4 class="letra-info-blanca">
                     Somos unos apasionados por la cerveza y la comida de calidad.Nuestro bar es un excelente espacio para disfrutar de la compañia de amigos, familiares o en pareja.
                     Con un estilo inconfundible , por la calidad de los productos y la dedicada atención a nuestros clientes
                 </h4>
             </div>
+    </div>
+    <div class="container">
+        <img src="../imagenes/somos_caprice.jpg" alt="Mapa Ubicación Caprice" class="img-fluid" >
     </div>
 </div>
 <link href="{!! asset('css/estilosbase.css') !!}" rel="stylesheet">
